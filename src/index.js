@@ -8,5 +8,6 @@ export { default as OnboardingNav } from './OnboardingNav.js';
 export { default as OutlineButton } from './OutlineButton.js';
 export { default as PrefixInput } from './PrefixInput.js';
 export { default as ProgressBar } from './ProgressBar.js';
+export { default as RadioButton } from './RadioButton.js';
 export { default as SuffixInput } from './SuffixInput.js';
 
