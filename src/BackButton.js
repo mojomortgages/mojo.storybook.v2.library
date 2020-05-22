@@ -9,7 +9,7 @@ var styled__default = _interopDefault(styled);
 var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-f85ace62.js');
 var React = _interopDefault(require('react'));
 
-var BackArrow = "<svg width=\"24\" height=\"8\" viewBox=\"0 0 24 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.2605 7.8409L0.143458 4.38409C-0.0478183 4.17196 -0.0478183 3.82804 0.143458 3.61591L3.2605 0.159094C3.45178 -0.0530334 3.7619 -0.0530333 3.95318 0.159094C4.14446 0.371221 4.14446 0.715148 3.95318 0.927275L1.67227 3.45681L24 3.45681L24 4.54319L1.67227 4.54318L3.95318 7.07272C4.14445 7.28485 4.14445 7.62878 3.95318 7.8409C3.7619 8.05303 3.45178 8.05303 3.2605 7.8409Z\" fill=\"#16181A\"/>\n</svg>";
+const img = "data:image/svg+xml,%3csvg width='24' height='8' viewBox='0 0 24 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.2605 7.8409L0.143458 4.38409C-0.0478183 4.17196 -0.0478183 3.82804 0.143458 3.61591L3.2605 0.159094C3.45178 -0.0530334 3.7619 -0.0530333 3.95318 0.159094C4.14446 0.371221 4.14446 0.715148 3.95318 0.927275L1.67227 3.45681L24 3.45681L24 4.54319L1.67227 4.54318L3.95318 7.07272C4.14445 7.28485 4.14445 7.62878 3.95318 7.8409C3.7619 8.05303 3.45178 8.05303 3.2605 7.8409Z' fill='%2316181A'/%3e%3c/svg%3e";
 
 function _templateObject2() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: relative;\n  background: transparent;\n  border: none;\n  font-size: 1rem;\n  outline: none;\n  padding-left: 32px;\n  color: ", ";\n  cursor: pointer;\n  &:hover {\n    ", " {\n      transform: translate(-4px, 0);\n    }\n  }\n"]);
@@ -32,7 +32,7 @@ function _templateObject() {
 }
 var ArrowImg = styled__default.div(_templateObject(), function (props) {
   return props.theme.cta;
-}, BackArrow, BackArrow, function (props) {
+}, img, img, function (props) {
   return props.disabled ? "0.5" : "1";
 });
 var Container = styled__default.button(_templateObject2(), function (props) {
