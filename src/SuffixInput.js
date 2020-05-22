@@ -62,7 +62,9 @@ function Input(props) {
     type: "text",
     id: props.id,
     disabled: props.disabled,
-    placeholder: props.placeholder
+    placeholder: props.placeholder,
+    onChange: props.onChange,
+    onClick: props.onClick
   }), /*#__PURE__*/React.createElement(Suffix, {
     "for": props.id
   }, props.suffix));

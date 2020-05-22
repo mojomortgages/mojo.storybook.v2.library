@@ -77,7 +77,9 @@ function CheckButton(props) {
     type: "checkbox",
     id: props.id,
     name: props.name,
-    value: props.value
+    value: props.value,
+    onChange: props.onChange,
+    onClick: props.onClick
   }), /*#__PURE__*/React.createElement(Container, {
     htmlFor: props.id
   }, /*#__PURE__*/React.createElement(Checkmark, null), /*#__PURE__*/React.createElement(Text, null, props.children)));
