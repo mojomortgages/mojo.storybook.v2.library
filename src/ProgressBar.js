@@ -10,7 +10,7 @@ var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-000d8ab5.js
 var React = _interopDefault(require('react'));
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 100%;\n  width: ", "%;\n  background: ", ";\n  border-radius: 24px;\n  text-align: right;\n  padding-right: 16px;\n  color: ", ";\n  font-family: sans-serif;\n  line-height: 24px;\n  transition: 0.8s ease-in-out;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 100%;\n  width: ", "%;\n  background: ", ";\n  border-radius: 24px;\n  text-align: right;\n  padding-right: 16px;\n  color: ", ";\n  font-family: sans-serif;\n  line-height: 24px;\n  transition: width 0.8s cubic-bezier(0.1, 0.9, 0.9, 0.1);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
