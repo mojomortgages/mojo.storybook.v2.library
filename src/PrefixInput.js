@@ -6,8 +6,9 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
-var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-f85ace62.js');
+var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-000d8ab5.js');
 var React = _interopDefault(require('react'));
+var index = require('./index-d340ebbe.js');
 
 function _templateObject3() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
@@ -55,7 +56,7 @@ var Prefix = styled__default.label(_templateObject2(), function (props) {
 var InnerInput = styled__default.input(_templateObject3(), function (props) {
   return props.theme.shade[0];
 });
-function Input(props) {
+function PrefixInput(props) {
   return /*#__PURE__*/React.createElement(Container, {
     disabled: props.disabled
   }, /*#__PURE__*/React.createElement(Prefix, {
@@ -70,5 +71,8 @@ function Input(props) {
     onClick: props.onClick
   }));
 }
+PrefixInput.PropTypes = {
+  placeholder: index.PropTypes.string
+};
 
-exports.default = Input;
+exports.default = PrefixInput;
