@@ -48,6 +48,7 @@ function Input(props) {
     id: props.id,
     disabled: props.disabled,
     placeholder: props.placeholder,
+    value: props.value,
     onChange: props.onChange,
     onClick: props.onClick
   }));

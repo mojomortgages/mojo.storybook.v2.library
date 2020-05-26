@@ -41,6 +41,8 @@ var Container = styled__default.button(_templateObject2(), function (props) {
 function Button(props) {
   return /*#__PURE__*/React.createElement(Container, {
     disabled: props.disabled,
+    value: props.value,
+    onChange: props.onChange,
     onClick: props.onClick
   }, /*#__PURE__*/React.createElement(ArrowImg, {
     disabled: props.disabled

@@ -28,6 +28,8 @@ var Container = styled__default.button(_templateObject(), function (props) {
 function Button(props) {
   return /*#__PURE__*/React.createElement(Container, {
     disabled: props.disabled,
+    value: props.value,
+    onChange: props.onChange,
     onClick: props.onClick
   }, props.children);
 }
