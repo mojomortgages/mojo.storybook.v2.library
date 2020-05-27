@@ -40,7 +40,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  font-family: \"Inter\", sans-serif;\n  font-size: 14px;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  font-family: \"Inter\", sans-serif;\n  font-size: 0.8em;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
