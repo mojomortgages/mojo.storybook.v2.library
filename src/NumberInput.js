@@ -10,6 +10,7 @@ var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-4edf0050.js
 var React = require('react');
 var React__default = _interopDefault(React);
 var index = require('./index-58a12fd4.js');
+var reactNumberFormat_es = require('./react-number-format.es-086060ff.js');
 
 function _templateObject2() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
@@ -39,7 +40,7 @@ var Container = styled__default.div(_templateObject(), function (props) {
 }, function (props) {
   return props.theme.cta;
 });
-var InnerInput = styled__default.input(_templateObject2(), function (props) {
+var InnerInput = styled__default(reactNumberFormat_es.NumberFormat)(_templateObject2(), function (props) {
   return props.theme.shade[0];
 });
 function Input(props) {

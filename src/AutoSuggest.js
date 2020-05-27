@@ -2095,8 +2095,18 @@ index.unwrapExports(Autosuggest_1);
 
 var dist$2 = Autosuggest_1["default"];
 
+function _templateObject3() {
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  .suggestionHighlighted {\n    background: red;\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  input {\n    display: block;\n    border: none;\n    background: transparent;\n    width: 100%;\n    height: 100%;\n    padding: 12px 16px;\n    font-size: 16px;\n    color: ", ";\n    box-sizing: border-box;\n    outline: none;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -2123,22 +2133,38 @@ var Container = styled__default.div(_templateObject(), function (props) {
 }, function (props) {
   return props.theme.cta;
 });
-var InnerInput = styled__default(dist$2)(_templateObject2(), function (props) {
+var InnerInput = styled__default.div(_templateObject2(), function (props) {
   return props.theme.shade[0];
-}); // Imagine you have a list of languages that you'd like to autosuggest.
+});
+var SuggestionContainer = styled__default.div(_templateObject3()); // Imagine you have a list of languages that you'd like to autosuggest.
 
-var languages = [{
-  name: "Natwest",
-  year: 1972
+var suggestions = [{
+  title: "A",
+  suggestions: [{
+    id: "100",
+    text: "Apple"
+  }, {
+    id: "101",
+    text: "Apricot"
+  }]
 }, {
-  name: "Mojo Mortgages",
-  year: 2012
+  title: "B",
+  suggestions: [{
+    id: "102",
+    text: "Banana"
+  }]
+}, {
+  title: "C",
+  suggestions: [{
+    id: "103",
+    text: "Cherry"
+  }]
 }]; // Teach Autosuggest how to calculate suggestions for any given input value.
 
 var getSuggestions = function getSuggestions(value) {
   var inputValue = value.trim().toLowerCase();
   var inputLength = inputValue.length;
-  return inputLength === 0 ? [] : languages.filter(function (lang) {
+  return inputLength === 0 ? [] : suggestions.filter(function (lang) {
     return lang.name.toLowerCase().slice(0, inputLength) === inputValue;
   });
 }; // When suggestion is clicked, Autosuggest needs to populate the input
@@ -2152,7 +2178,7 @@ var getSuggestionValue = function getSuggestionValue(suggestion) {
 
 
 var renderSuggestion = function renderSuggestion(suggestion) {
-  return /*#__PURE__*/React__default.createElement("div", null, suggestion.name);
+  return /*#__PURE__*/React__default.createElement(SuggestionContainer, null, suggestion.name);
 };
 
 var AutoSuggest = /*#__PURE__*/function (_Component) {
@@ -2213,14 +2239,14 @@ var AutoSuggest = /*#__PURE__*/function (_Component) {
         onChange: this.onChange
       }; // Finally, render it!
 
-      return /*#__PURE__*/React__default.createElement(Container, null, console.log(this.props), /*#__PURE__*/React__default.createElement(InnerInput, {
+      return /*#__PURE__*/React__default.createElement(Container, null, /*#__PURE__*/React__default.createElement(InnerInput, null, /*#__PURE__*/React__default.createElement(dist$2, {
         suggestions: suggestions,
         onSuggestionsFetchRequested: this.onSuggestionsFetchRequested,
         onSuggestionsClearRequested: this.onSuggestionsClearRequested,
         getSuggestionValue: getSuggestionValue,
         renderSuggestion: renderSuggestion,
         inputProps: inputProps
-      }));
+      })));
     }
   }]);
 
