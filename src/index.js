@@ -4,6 +4,7 @@ export { default as AutoSuggest } from './AutoSuggest.js';
 export { default as BackButton } from './BackButton.js';
 export { default as Button } from './Button.js';
 export { default as CheckButton } from './CheckButton.js';
+export { default as ComboBox } from './ComboBox.js';
 export { default as Input } from './Input.js';
 export { default as LibraryThemeProvider } from './LibraryThemeProvider.js';
 export { default as NumberInput } from './NumberInput.js';
