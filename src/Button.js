@@ -6,8 +6,9 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
-var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-000d8ab5.js');
-var React = _interopDefault(require('react'));
+var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-4edf0050.js');
+var React = require('react');
+var React__default = _interopDefault(React);
 
 function _templateObject() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  padding: 8px 16px;\n  border-radius: ", ";\n  border: none;\n  font-size: 1rem;\n  color: ", ";\n"]);
@@ -26,7 +27,7 @@ var Container = styled__default.button(_templateObject(), function (props) {
   return props.theme.shade[100];
 });
 function Button(props) {
-  return /*#__PURE__*/React.createElement(Container, {
+  return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled,
     value: props.value,
     onChange: props.onChange,

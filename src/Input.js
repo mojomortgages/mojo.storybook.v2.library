@@ -6,9 +6,10 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
-var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-000d8ab5.js');
-var React = _interopDefault(require('react'));
-var index = require('./index-d340ebbe.js');
+var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-4edf0050.js');
+var React = require('react');
+var React__default = _interopDefault(React);
+var index = require('./index-58a12fd4.js');
 
 /**
  * react-number-format - 4.4.1
@@ -1338,24 +1339,24 @@ function (_React$Component) {
       });
 
       if (displayType === 'text') {
-        return renderText ? renderText(value) || null : React.createElement("span", _extends({}, otherProps, {
+        return renderText ? renderText(value) || null : React__default.createElement("span", _extends({}, otherProps, {
           ref: getInputRef
         }), value);
       } else if (customInput) {
         var CustomInput = customInput;
-        return React.createElement(CustomInput, _extends({}, inputProps, {
+        return React__default.createElement(CustomInput, _extends({}, inputProps, {
           ref: getInputRef
         }));
       }
 
-      return React.createElement("input", _extends({}, inputProps, {
+      return React__default.createElement("input", _extends({}, inputProps, {
         ref: getInputRef
       }));
     }
   }]);
 
   return NumberFormat;
-}(React.Component);
+}(React__default.Component);
 
 NumberFormat.propTypes = propTypes$1;
 NumberFormat.defaultProps = defaultProps;
@@ -1392,9 +1393,9 @@ var InnerInput = styled__default(NumberFormat)(_templateObject2(), function (pro
   return props.theme.shade[0];
 });
 function Input(props) {
-  return /*#__PURE__*/React.createElement(Container, {
+  return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
-  }, /*#__PURE__*/React.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
+  }, /*#__PURE__*/React__default.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
     type: "text",
     id: props.id,
     disabled: props.disabled,

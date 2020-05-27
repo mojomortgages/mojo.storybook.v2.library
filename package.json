@@ -1,6 +1,6 @@
 {
   "name": "mojo-storybook-v2ibrary",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "UI Component v2 library for Mojo Mortgages",
   "main": "src/index.js",
   "scripts": {

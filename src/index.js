@@ -1,5 +1,6 @@
 // @create-index
 
+export { default as AutoSuggest } from './AutoSuggest.js';
 export { default as BackButton } from './BackButton.js';
 export { default as Button } from './Button.js';
 export { default as CheckButton } from './CheckButton.js';
