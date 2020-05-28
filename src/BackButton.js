@@ -39,7 +39,7 @@ var ArrowImg = styled__default.div(_templateObject(), function (props) {
 var Container = styled__default.button(_templateObject2(), function (props) {
   return props.disabled ? props.theme.cta + "80" : props.theme.cta;
 }, ArrowImg);
-function Button(props) {
+function BackButton(props) {
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled,
     value: props.value,
@@ -50,4 +50,4 @@ function Button(props) {
   }), props.children);
 }
 
-exports.default = Button;
+exports.default = BackButton;

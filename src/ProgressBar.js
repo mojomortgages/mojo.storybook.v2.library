@@ -39,10 +39,10 @@ var Meter = styled__default.div(_templateObject2(), function (props) {
 }, function (props) {
   return props.theme.shade[100];
 });
-function Button(props) {
+function ProgressBar(props) {
   return /*#__PURE__*/React__default.createElement(Bar, null, /*#__PURE__*/React__default.createElement(Meter, {
     progress: props.progress
   }, props.progress, "%"));
 }
 
-exports.default = Button;
+exports.default = ProgressBar;
