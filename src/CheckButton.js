@@ -11,7 +11,7 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _templateObject4() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      box-shadow: 0 0 0 2px ", ";\n      ", " {\n        box-shadow: 0 0 0 2px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      background: ", ";\n      box-shadow: 0 0 0 1px ", ";\n      ", " {\n        background: ", ";\n        box-shadow: 0 0 0 1px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -66,12 +66,16 @@ var Checkmark = styled__default.span(_templateObject3(), function (props) {
 }, function (props) {
   return props.theme.shade[60];
 }, function (props) {
-  return props.theme.primary;
+  return props.theme.tertiary;
 });
 var Input = styled__default.input(_templateObject4(), Container, function (props) {
-  return props.theme.primary;
+  return props.theme.tertiary;
+}, function (props) {
+  return props.theme.tertiary;
 }, Checkmark, function (props) {
-  return props.theme.primary;
+  return props.theme.tertiary;
+}, function (props) {
+  return props.theme.shade[100];
 });
 function CheckButton(props) {
   return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input, {

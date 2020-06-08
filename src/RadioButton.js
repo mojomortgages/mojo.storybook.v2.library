@@ -11,7 +11,7 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _templateObject4() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      box-shadow: 0 0 0 2px ", ";\n      ", " {\n        border: 2px solid ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      background: ", ";\n      box-shadow: 0 0 0 1px ", ";\n      color: ", ";\n      font-weight: 500;\n      ", " {\n        background: ", ";\n        box-shadow: 0 0 0 2px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -21,7 +21,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  border: 2px solid ", ";\n  margin-right: 16px;\n  border-radius: 100%;\n  position: relative;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    background: ", ";\n    transform: scale(0);\n    transform-origin: center;\n    transition: 0.4s;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  margin-right: 16px;\n  border-radius: 100%;\n  position: relative;\n  transition: all 0.4s;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n    background: ", ";\n    transform: scale(0);\n    transform-origin: center;\n    transition: 0.4s;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -31,7 +31,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  padding: 16px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  border-radius: ", ";\n  align-items: center;\n  transition: background 0.2s, box-shadow 0.4s;\n  cursor: pointer;\n  color: ", ";\n  &:hover {\n    background: ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  padding: 16px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  border-radius: ", ";\n  align-items: center;\n  transition: all 0.4s;\n  cursor: pointer;\n  color: ", ";\n  &:hover {\n    background: ", ";\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -66,12 +66,18 @@ var Checkmark = styled__default.span(_templateObject3(), function (props) {
 }, function (props) {
   return props.theme.shade[60];
 }, function (props) {
-  return props.theme.primary;
+  return props.theme.shade[100];
 });
 var Input = styled__default.input(_templateObject4(), Container, function (props) {
-  return props.theme.primary;
+  return props.theme.tertiary;
+}, function (props) {
+  return props.theme.tertiary;
+}, function (props) {
+  return props.theme.shade[100];
 }, Checkmark, function (props) {
-  return props.theme.primary;
+  return props.theme.tertiary;
+}, function (props) {
+  return props.theme.shade[100];
 });
 function RadioButton(props) {
   return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input, {

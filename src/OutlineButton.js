@@ -11,7 +11,7 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: ", "\n    2px solid;\n  padding: 8px 16px;\n  border-radius: ", ";\n  font-size: 1rem;\n  color: ", ";\n  background: transparent;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: ", "\n    2px solid;\n  padding: 16px 24px;\n  border-radius: ", ";\n  font-size: 1rem;\n  color: ", ";\n  background: transparent;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
