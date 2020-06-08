@@ -10,8 +10,10 @@ var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-4edf0050.js
 var React = require('react');
 var React__default = _interopDefault(React);
 
+const img = "data:image/svg+xml,%3csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 4.17647L3.56 7L9 1' stroke='white' stroke-width='1.69231'/%3e%3c/svg%3e";
+
 function _templateObject4() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      background: ", ";\n      box-shadow: 0 0 0 1px ", ";\n      ", " {\n        background: ", ";\n        box-shadow: 0 0 0 1px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      background: ", ";\n      box-shadow: 0 0 0 1px ", ";\n      color: ", ";\n      font-weight: 500;\n      ", " {\n        background: ", ";\n        box-shadow: 0 0 0 2px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -21,7 +23,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    background: ", ";\n    transform: scale(0);\n    transform-origin: center;\n    transition: 0.4s;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  transition: 0.2s;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    transform: scale(0) rotate(45deg);\n    transform-origin: center;\n    transition: 0.2s;\n    background-image: url(", ");\n    background-position: center;\n    background-repeat: no-repeat;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -31,7 +33,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  padding: 16px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  border-radius: ", ";\n  align-items: center;\n  transition: background 0.2s, box-shadow 0.4s;\n  cursor: pointer;\n  color: ", ";\n  &:hover {\n    background: ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: flex;\n  position: relative;\n  padding: 16px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  border-radius: ", ";\n  align-items: center;\n  transition: 0.2s;\n  cursor: pointer;\n  color: ", ";\n  &:hover {\n    background: ", ";\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -65,13 +67,13 @@ var Checkmark = styled__default.span(_templateObject3(), function (props) {
   return props.theme.shade[80];
 }, function (props) {
   return props.theme.shade[60];
-}, function (props) {
-  return props.theme.tertiary;
-});
+}, img);
 var Input = styled__default.input(_templateObject4(), Container, function (props) {
   return props.theme.tertiary;
 }, function (props) {
   return props.theme.tertiary;
+}, function (props) {
+  return props.theme.shade[100];
 }, Checkmark, function (props) {
   return props.theme.tertiary;
 }, function (props) {
