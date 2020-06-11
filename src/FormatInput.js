@@ -43,7 +43,7 @@ var Container = styled__default.div(_templateObject(), function (props) {
 var InnerInput = styled__default(reactNumberFormat_es.NumberFormat)(_templateObject2(), function (props) {
   return props.theme.shade[0];
 });
-function Input(props) {
+function FormatInput(props) {
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
@@ -56,8 +56,8 @@ function Input(props) {
     onClick: props.onClick
   }, props)));
 }
-Input.PropTypes = {
+FormatInput.PropTypes = {
   placeholder: index.PropTypes.string
 };
 
-exports.default = Input;
+exports.default = FormatInput;
