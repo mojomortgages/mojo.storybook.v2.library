@@ -23,7 +23,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: logo;\n  width: 100%;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: logo;\n  width: 100%;\n  margin-bottom: 0;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
