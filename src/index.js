@@ -16,4 +16,5 @@ export { default as ProgressIndicator } from './ProgressIndicator.js';
 export { default as RadioButton } from './RadioButton.js';
 export { default as SuffixInput } from './SuffixInput.js';
 export { default as Tooltip } from './Tooltip.js';
+export { default as Validation } from './Validation.js';
 
