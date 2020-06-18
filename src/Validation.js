@@ -9,6 +9,7 @@ var styled__default = _interopDefault(styled);
 var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-7e6b80a7.js');
 var React = require('react');
 var React__default = _interopDefault(React);
+var index = require('./index-58a12fd4.js');
 
 function _templateObject5() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n      color: ", ";\n    "]);
@@ -79,5 +80,8 @@ function Validation(props) {
     status: props.status
   }, props.children));
 }
+Validation.propTypes = {
+  status: index.PropTypes.string
+};
 
 exports.default = Validation;
