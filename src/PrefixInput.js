@@ -61,7 +61,7 @@ function PrefixInput(props) {
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement(Prefix, {
-    "for": props.id
+    htmlFor: props.id
   }, props.prefix), /*#__PURE__*/React__default.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
     type: "text",
     id: props.id,
@@ -72,7 +72,7 @@ function PrefixInput(props) {
     onClick: props.onClick
   }, props)));
 }
-PrefixInput.PropTypes = {
+PrefixInput.propTypes = {
   placeholder: index.PropTypes.string
 };
 

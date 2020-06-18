@@ -70,10 +70,10 @@ function SuffixInput(props) {
     onChange: props.onChange,
     onClick: props.onClick
   }, props)), /*#__PURE__*/React__default.createElement(Suffix, {
-    "for": props.id
+    htmlFor: props.id
   }, props.suffix));
 }
-SuffixInput.PropTypes = {
+SuffixInput.propTypes = {
   placeholder: index.PropTypes.string
 };
 
