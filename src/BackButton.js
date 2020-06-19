@@ -23,7 +23,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background-image: url(", ") no-repeat center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  transition: 0.2s;\n  opacity: ", ";\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background-image: url(\"", "\") no-repeat center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  transition: 0.2s;\n  opacity: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
