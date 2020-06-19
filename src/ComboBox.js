@@ -23,7 +23,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  border-radius: 4px;\n  overflow: auto;\n  max-height: 256px;\n  margin-top: 8px;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  border-radius: 4px;\n  overflow: auto;\n  max-height: 256px;\n  margin-top: 8px;\n  border: 1px solid ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -33,6 +33,8 @@ function _templateObject() {
 }
 var List = styled__default.div(_templateObject(), function (props) {
   return props.theme.shade[100];
+}, function (props) {
+  return props.theme.shade[60];
 });
 var ListItem = styled__default.div(_templateObject2(), function (props) {
   return props.theme.shade[60];
