@@ -11,7 +11,7 @@ var React = require('react');
 var React__default = _interopDefault(React);
 
 function _templateObject7() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: icon;\n  width: 24px;\n  height: 24px;\n  background: red;\n  @media (min-width: ", ") {\n    display: none;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: icon;\n  width: 18px;\n  height: 18px;\n  background: ", ";\n  border-radius: 50%;\n  @media (min-width: ", ") {\n    display: none;\n  }\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -71,7 +71,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 24px;\n  color: ", ";\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: grid;\n  grid-auto-flow: dense;\n  grid-template-columns: auto 24px;\n  grid-gap: 8px;\n  @media (min-width: ", ") {\n    grid-template-areas: \"hidden hidden\";\n  }\n  @media (max-width: ", ") {\n    grid-template-areas: \"title icon\";\n  }\n  ", "\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 24px;\n  color: ", ";\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: grid;\n  grid-auto-flow: dense;\n  grid-template-columns: auto 18px;\n  grid-gap: 8px;\n  @media (min-width: ", ") {\n    grid-template-areas: \"hidden hidden\";\n  }\n  @media (max-width: ", ") {\n    grid-template-areas: \"title icon\";\n  }\n  ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -109,6 +109,8 @@ var Hidden = styled__default.div(_templateObject5(), function (props) {
   });
 });
 var Icon = styled__default.div(_templateObject7(), function (props) {
+  return props.theme.shade[0];
+}, function (props) {
   return props.theme.breakpoints.md;
 });
 function Tooltip(props) {
