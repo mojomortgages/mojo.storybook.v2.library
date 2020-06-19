@@ -23,7 +23,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background-color: ", ";\n  -webkit-mask: url(", ") no-repeat center;\n  mask: url(", ") no-repeat center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  transition: 0.2s;\n  opacity: ", ";\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background-image: url(", ") no-repeat center;\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  transition: 0.2s;\n  opacity: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -31,9 +31,7 @@ function _templateObject() {
 
   return data;
 }
-var ArrowImg = styled__default.div(_templateObject(), function (props) {
-  return props.theme.shade[0];
-}, img, img, function (props) {
+var ArrowImg = styled__default.div(_templateObject(), img, function (props) {
   return props.disabled ? "0.5" : "1";
 });
 var Container = styled__default.button(_templateObject2(), function (props) {
