@@ -31,7 +31,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: hidden;\n  ", "\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  grid-area: hidden;\n  ", "\n  p {\n    &:last-of-type {\n      margin-bottom: 0;\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
