@@ -22,7 +22,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  transition: 0.2s;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    transform: scale(0) rotate(45deg);\n    transform-origin: center;\n    transition: 0.2s;\n    background-image: url(", ");\n    background-position: center;\n    background-repeat: no-repeat;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  transition: 0.2s;\n  flex-shrink: 0;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    transform: scale(0) rotate(45deg);\n    transform-origin: center;\n    transition: 0.2s;\n    background-image: url(", ");\n    background-position: center;\n    background-repeat: no-repeat;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
