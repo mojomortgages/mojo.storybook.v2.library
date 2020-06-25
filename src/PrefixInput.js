@@ -12,7 +12,7 @@ var React__default = _interopDefault(React);
 var index = require('./index-58a12fd4.js');
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 1rem;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border-right: 2px solid ", ";\n  padding: 0 24px;\n  display: flex;\n  align-items: center;\n  color: ", ";\n  font-family: sans-serif;\n  margin: 8px 0;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 0 24px;\n  display: flex;\n  align-items: center;\n  color: ", ";\n  margin: 8px 0;\n  font-size: 0.8rem;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -50,8 +50,6 @@ var Container = styled__default.div(_templateObject(), function (props) {
   return props.theme.cta;
 });
 var Prefix = styled__default.label(_templateObject2(), function (props) {
-  return props.theme.shade[70];
-}, function (props) {
   return props.theme.shade[20];
 });
 var InnerInput = styled__default.input(_templateObject3(), function (props) {
