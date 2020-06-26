@@ -22,7 +22,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 0 24px;\n  display: flex;\n  align-items: center;\n  color: ", ";\n  margin: 8px 0;\n  font-size: 0.8rem;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 0 16px 0 0;\n  display: flex;\n  align-items: center;\n  color: ", ";\n  margin: 8px 0;\n  font-size: 0.8rem;\n  user-select: none;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
