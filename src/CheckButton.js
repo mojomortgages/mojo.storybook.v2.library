@@ -9,7 +9,7 @@ var styled__default = _interopDefault(styled);
 var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-7e6b80a7.js');
 var React = require('react');
 var React__default = _interopDefault(React);
-var check = require('./check-d69a2232.js');
+var check = require('./check-b50c1607.js');
 
 function _templateObject4() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  top: 0;\n  left: 0;\n  width: 0;\n  height: 0;\n  &:checked {\n    + ", " {\n      background: ", ";\n      box-shadow: 0 0 0 1px ", ";\n      color: ", ";\n      font-weight: 500;\n      ", " {\n        background: ", ";\n        box-shadow: 0 0 0 2px ", ";\n        &:after {\n          transform: scale(1);\n        }\n      }\n    }\n  }\n"]);

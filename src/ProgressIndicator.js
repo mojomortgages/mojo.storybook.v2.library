@@ -9,7 +9,7 @@ var styled__default = _interopDefault(styled);
 var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-7e6b80a7.js');
 var React = require('react');
 var React__default = _interopDefault(React);
-var check = require('./check-d69a2232.js');
+var check = require('./check-b50c1607.js');
 
 function _templateObject5() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  right: 0;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  width: 12px;\n  height: 12px;\n  transform: scale(0) rotate(45deg);\n  transform-origin: center;\n  transition: 0.2s;\n  background-image: url(", ");\n  background-position: center;\n  background-repeat: no-repeat;\n"]);
