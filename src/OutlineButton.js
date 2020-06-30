@@ -20,18 +20,19 @@ function _templateObject() {
   return data;
 }
 var Container = styled__default.button(_templateObject(), function (props) {
-  return props.disabled ? props.theme.cta + "80" : props.theme.cta;
+  return props.disabled ? props.theme.cta + "80" : props.color ? props.color : props.theme.cta;
 }, function (props) {
   return props.theme.radius["default"];
 }, function (props) {
-  return props.disabled ? props.theme.cta + "80" : props.theme.cta;
+  return props.disabled ? props.theme.cta + "80" : props.color ? props.color : props.theme.cta;
 });
 function Button(props) {
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled,
     value: props.value,
     onChange: props.onChange,
-    onClick: props.onClick
+    onClick: props.onClick,
+    color: props.color
   }, props.children);
 }
 
