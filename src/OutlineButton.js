@@ -27,9 +27,9 @@ var Container = styled__default.button(_templateObject(), function (props) {
 }, function (props) {
   return props.disabled ? props.theme.cta + "80" : props.color ? props.color : props.theme.cta;
 }, function (props) {
-  return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta);
+  return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta, 25);
 }, function (props) {
-  return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta);
+  return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta, 25);
 });
 function Button(props) {
   return /*#__PURE__*/React__default.createElement(Container, {

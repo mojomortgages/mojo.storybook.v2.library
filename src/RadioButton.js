@@ -86,8 +86,7 @@ function RadioButton(props) {
     name: props.name,
     value: props.value,
     onChange: props.onChange,
-    onClick: props.onClick,
-    checked: props.checked
+    onClick: props.onClick
   }), /*#__PURE__*/React__default.createElement(Container, {
     htmlFor: props.id
   }, /*#__PURE__*/React__default.createElement(Checkmark, null), /*#__PURE__*/React__default.createElement(Text, null, props.children)));
