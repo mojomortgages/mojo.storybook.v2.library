@@ -25,7 +25,7 @@ var Container = styled__default.button(_templateObject(), function (props) {
 }, function (props) {
   return props.theme.radius["default"];
 }, function (props) {
-  return props.theme.shade[100];
+  return props.text ? props.text : props.theme.shade[100];
 }, function (props) {
   return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta, 25);
 });
@@ -34,7 +34,9 @@ function Button(props) {
     disabled: props.disabled,
     value: props.value,
     onChange: props.onChange,
-    onClick: props.onClick
+    onClick: props.onClick,
+    color: props.color,
+    text: props.text
   }, props.children);
 }
 
