@@ -89,7 +89,8 @@ function RadioButton(props) {
     onClick: props.onClick,
     checked: props.checked
   }), /*#__PURE__*/React__default.createElement(Container, {
-    htmlFor: props.id
+    htmlFor: props.id,
+    id: "lbl-".concat(props.id)
   }, /*#__PURE__*/React__default.createElement(Checkmark, null), /*#__PURE__*/React__default.createElement(Text, null, props.children)));
 }
 
