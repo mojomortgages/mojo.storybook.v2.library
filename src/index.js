@@ -7,6 +7,7 @@ export { default as Button } from './Button.js';
 export { default as CheckButton } from './CheckButton.js';
 export { default as ComboBox } from './ComboBox.js';
 export { default as FormatInput } from './FormatInput.js';
+export { default as InlineCheck } from './InlineCheck.js';
 export { default as Input } from './Input.js';
 export { default as LibraryThemeProvider } from './LibraryThemeProvider.js';
 export { default as OnboardingNav } from './OnboardingNav.js';
