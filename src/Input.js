@@ -6,13 +6,23 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
-var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-4edf0050.js');
+var _rollupPluginBabelHelpers = require('./_rollupPluginBabelHelpers-7e6b80a7.js');
 var React = require('react');
 var React__default = _interopDefault(React);
 var index = require('./index-58a12fd4.js');
 
-function _templateObject2() {
+function _templateObject3() {
   var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: 1px solid ", ";\n  background: ", ";\n  position: relative;\n  border-radius: ", ";\n  &:focus-within {\n    border: 1px solid ", ";\n    box-shadow: 0 0 4px ", ";\n    ", " {\n      left: ", ";\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -22,7 +32,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: 1px solid ", ";\n  background: ", ";\n  position: relative;\n  border-radius: ", ";\n  &:focus-within {\n    border: 1px solid ", ";\n    box-shadow: 0 0 4px ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  transition: 1s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  font-size: 0.8rem;\n  background: linear-gradient(\n    to right,\n    rgba(255, 255, 255, 0) 0%,\n    rgba(255, 255, 255, 1) 16px,\n    rgba(255, 255, 255, 1) 100%\n  );\n  z-index: 1;\n  box-sizing: border-box;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -30,7 +40,10 @@ function _templateObject() {
 
   return data;
 }
-var Container = styled__default.div(_templateObject(), function (props) {
+var Label = styled__default.label(_templateObject(), function (props) {
+  return props.theme.shade[20];
+});
+var Container = styled__default.div(_templateObject2(), function (props) {
   return props.theme.shade[60];
 }, function (props) {
   return props.disabled ? props.theme.shade[80] : props.theme.shade[100];
@@ -40,22 +53,48 @@ var Container = styled__default.div(_templateObject(), function (props) {
   return props.theme.cta;
 }, function (props) {
   return props.theme.cta;
+}, Label, function (props) {
+  return props.inputOffset - props.labelOffset - 0.5 + "px";
 });
-var InnerInput = styled__default.input(_templateObject2(), function (props) {
+var InnerInput = styled__default.input(_templateObject3(), function (props) {
   return props.theme.shade[0];
 });
 function Input(props) {
+  var _useState = React.useState(0),
+      _useState2 = _rollupPluginBabelHelpers._slicedToArray(_useState, 2),
+      inputWidth = _useState2[0],
+      setInputWidth = _useState2[1];
+
+  var _useState3 = React.useState(0),
+      _useState4 = _rollupPluginBabelHelpers._slicedToArray(_useState3, 2),
+      labelWidth = _useState4[0],
+      setLabelWidth = _useState4[1];
+
+  var inputRef = React.useRef(null);
+  var labelRef = React.useRef(null);
+  React.useEffect(function () {
+    setInputWidth(inputRef.current.clientWidth);
+    setLabelWidth(labelRef.current.clientWidth);
+  });
   return /*#__PURE__*/React__default.createElement(Container, {
-    disabled: props.disabled
+    disabled: props.disabled,
+    inputOffset: inputWidth,
+    labelOffset: labelWidth
   }, /*#__PURE__*/React__default.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
     type: "text",
     id: props.id,
     disabled: props.disabled,
-    placeholder: props.placeholder,
     value: props.value,
     onChange: props.onChange,
     onClick: props.onClick
-  }, props)));
+  }, props, {
+    ref: inputRef
+  })), /*#__PURE__*/React__default.createElement(Label, {
+    ref: labelRef,
+    inputOffset: inputWidth,
+    labelOffset: labelWidth,
+    "for": props.id
+  }, "It doesn't matter what's in here, it should still work"));
 }
 Input.PropTypes = {
   placeholder: index.PropTypes.string
