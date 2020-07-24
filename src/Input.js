@@ -32,7 +32,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  transition: 1s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  font-size: 0.8rem;\n  background: linear-gradient(\n    to right,\n    rgba(255, 255, 255, 0) 0%,\n    rgba(255, 255, 255, 1) 16px,\n    rgba(255, 255, 255, 1) 100%\n  );\n  z-index: 1;\n  box-sizing: border-box;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  transition: 0.4s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  font-size: 0.8rem;\n  background: linear-gradient(\n    to right,\n    rgba(255, 255, 255, 0) 0%,\n    rgba(255, 255, 255, 1) 16px,\n    rgba(255, 255, 255, 1) 100%\n  );\n  z-index: 1;\n  box-sizing: border-box;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
