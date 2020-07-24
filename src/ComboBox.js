@@ -42,16 +42,14 @@ var ListItem = styled__default.div(_templateObject2(), function (props) {
   return props.theme.shade[80];
 });
 function ComboBox(_ref) {
-  var placeholder = _ref.placeholder,
-      value = _ref.value,
+  var value = _ref.value,
       onInputChanged = _ref.onInputChanged,
       comboSelections = _ref.comboSelections,
       onSelectionMade = _ref.onSelectionMade;
-  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input.default, {
+  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input.default, _rollupPluginBabelHelpers._extends({
     value: value,
-    onChange: onInputChanged,
-    placeholder: placeholder
-  }), /*#__PURE__*/React__default.createElement(List, null, comboSelections && comboSelections.map(function (selection) {
+    onChange: onInputChanged
+  }, props)), /*#__PURE__*/React__default.createElement(List, null, comboSelections && comboSelections.map(function (selection) {
     return /*#__PURE__*/React__default.createElement(ListItem, {
       key: selection.text,
       onClick: function onClick() {
