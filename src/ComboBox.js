@@ -47,12 +47,14 @@ function ComboBox(_ref) {
       onInputChanged = _ref.onInputChanged,
       comboSelections = _ref.comboSelections,
       onSelectionMade = _ref.onSelectionMade,
-      isLoading = _ref.isLoading;
+      isLoading = _ref.isLoading,
+      disabled = _ref.disabled;
   return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input.default, {
     value: value,
     onChange: onInputChanged,
     label: label,
-    isLoading: isLoading
+    isLoading: isLoading,
+    disabled: disabled
   }), /*#__PURE__*/React__default.createElement(List, {
     size: "4"
   }, comboSelections && comboSelections.map(function (selection) {
