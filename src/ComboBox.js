@@ -46,11 +46,13 @@ function ComboBox(_ref) {
       value = _ref.value,
       onInputChanged = _ref.onInputChanged,
       comboSelections = _ref.comboSelections,
-      onSelectionMade = _ref.onSelectionMade;
+      onSelectionMade = _ref.onSelectionMade,
+      isLoading = _ref.isLoading;
   return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input.default, {
     value: value,
     onChange: onInputChanged,
-    label: label
+    label: label,
+    isLoading: isLoading
   }), /*#__PURE__*/React__default.createElement(List, {
     size: "4"
   }, comboSelections && comboSelections.map(function (selection) {
