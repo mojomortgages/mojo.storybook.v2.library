@@ -23,7 +23,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  border-radius: 4px;\n  overflow: auto;\n  max-height: 256px;\n  border: 1px solid ", ";\n  :empty {\n    border: none;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  border-radius: 4px;\n  overflow: auto;\n  border: 1px solid ", ";\n  :empty {\n    display: none;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
