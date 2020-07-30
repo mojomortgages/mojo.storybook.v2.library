@@ -75,7 +75,7 @@ var Container = styled__default.div(_templateObject2(), function (props) {
   return props.theme.cta;
 });
 var InnerInput = styled__default.input(_templateObject3(), function (props) {
-  return props.labelOffset + 16 + "px";
+  return props.labelOffset * 0.8 + 16 + "px";
 }, function (props) {
   return props.disabled ? props.theme.shade[40] : props.theme.shade[0];
 }, Label, Label, function (props) {
