@@ -13,7 +13,7 @@ require('./index-58a12fd4.js');
 var Input = require('./Input.js');
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 16px;\n  cursor: pointer;\n  border-top: 1px solid ", ";\n  :hover {\n    background: ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 16px;\n  cursor: pointer;\n  max-height: 240px;\n  border-top: 1px solid ", ";\n  :hover {\n    background: ", ";\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
