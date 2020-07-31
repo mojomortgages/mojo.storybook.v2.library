@@ -31,12 +31,12 @@ function _templateObject() {
 
   return data;
 }
-var List = styled__default.select(_templateObject(), function (props) {
+var List = styled__default.div(_templateObject(), function (props) {
   return props.theme.shade[100];
 }, function (props) {
   return props.theme.shade[60];
 });
-var ListItem = styled__default.option(_templateObject2(), function (props) {
+var ListItem = styled__default.div(_templateObject2(), function (props) {
   return props.theme.shade[60];
 }, function (props) {
   return props.theme.shade[80];
@@ -55,9 +55,7 @@ function ComboBox(_ref) {
     label: label,
     isLoading: isLoading,
     disabled: disabled
-  }), /*#__PURE__*/React__default.createElement(List, {
-    size: "4"
-  }, comboSelections && comboSelections.map(function (selection) {
+  }), /*#__PURE__*/React__default.createElement(List, null, comboSelections && comboSelections.map(function (selection) {
     return /*#__PURE__*/React__default.createElement(ListItem, {
       key: selection.text,
       onClick: function onClick() {
