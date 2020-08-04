@@ -119,7 +119,8 @@ function Input(props) {
   }, props, {
     inputOffset: inputWidth,
     labelOffset: labelWidth,
-    ref: inputRef
+    ref: inputRef,
+    autoComplete: "off"
   })), /*#__PURE__*/React__default.createElement(Label, {
     ref: labelRef,
     inputOffset: inputWidth,
