@@ -105,8 +105,13 @@ function CheckButton(props) {
     onClick: props.onClick,
     checked: props.checked
   }), /*#__PURE__*/React__default.createElement(Container, {
+    id: "".concat(props.id, "-container"),
     htmlFor: props.id
-  }, /*#__PURE__*/React__default.createElement(Checkmark, null), /*#__PURE__*/React__default.createElement(Text, null, props.children)));
+  }, /*#__PURE__*/React__default.createElement(Checkmark, {
+    id: "".concat(props.id, "-checkmark")
+  }), /*#__PURE__*/React__default.createElement(Text, {
+    id: "".concat(props.id, "-text")
+  }, props.children)));
 }
 
 exports.default = CheckButton;
