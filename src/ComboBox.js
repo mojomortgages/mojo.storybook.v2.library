@@ -48,14 +48,18 @@ function ComboBox(_ref) {
       comboSelections = _ref.comboSelections,
       onSelectionMade = _ref.onSelectionMade,
       isLoading = _ref.isLoading,
-      disabled = _ref.disabled;
+      disabled = _ref.disabled,
+      id = _ref.id;
   return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement(Input.default, {
     value: value,
     onChange: onInputChanged,
     label: label,
     isLoading: isLoading,
-    disabled: disabled
-  }), /*#__PURE__*/React__default.createElement(List, null, comboSelections && comboSelections.map(function (selection) {
+    disabled: disabled,
+    id: "".concat(id, "-input")
+  }), /*#__PURE__*/React__default.createElement(List, {
+    id: "".concat(id, "-list")
+  }, comboSelections && comboSelections.map(function (selection) {
     return /*#__PURE__*/React__default.createElement(ListItem, {
       key: selection.text,
       onClick: function onClick() {
