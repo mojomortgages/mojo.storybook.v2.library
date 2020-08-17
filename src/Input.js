@@ -32,7 +32,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px ", " 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n  &:empty {\n    + ", " {\n      left: 0;\n    }\n  }\n  &:focus,\n  &:not(:placeholder-shown) {\n    + ", " {\n      left: ", ";\n      transform: scale(0.8);\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px ", " 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n  &:empty {\n    + ", " {\n      width: 0;\n    }\n  }\n  &:focus,\n  &:not(:placeholder-shown) {\n    + ", " {\n      width: 100%;\n      p {\n        transform: scale(0.8);\n      }\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  display: block;\n  transition: 0.4s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  z-index: 1;\n  box-sizing: border-box;\n  transform-origin: right center;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  width: 100%;\n  display: block;\n  transition: 0.4s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  z-index: 1;\n  white-space: nowrap;\n  text-align: right;\n  p {\n    display: inline-block;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -75,34 +75,57 @@ var Container = styled__default.div(_templateObject2(), function (props) {
   return props.theme.cta;
 });
 var InnerInput = styled__default.input(_templateObject3(), function (props) {
-  return props.labelOffset * 0.8 + 16 + "px";
+  return props.labelOffset * 0.9 + 32 + "px";
 }, function (props) {
   return props.disabled ? props.theme.shade[40] : props.theme.shade[0];
-}, Label, Label, function (props) {
-  return props.inputOffset - props.labelOffset - 1 + "px";
-});
+}, Label, Label);
 var animation = styled.keyframes(_templateObject4());
 var Loader = styled__default.div(_templateObject5(), function (props) {
   return props.theme.shade[60];
 }, animation, function (props) {
   return props.isLoading ? "block" : "none";
 });
-function Input(props) {
-  var _useState = React.useState(0),
-      _useState2 = _rollupPluginBabelHelpers._slicedToArray(_useState, 2),
-      inputWidth = _useState2[0],
-      setInputWidth = _useState2[1];
 
-  var _useState3 = React.useState(0),
-      _useState4 = _rollupPluginBabelHelpers._slicedToArray(_useState3, 2),
-      labelWidth = _useState4[0],
-      setLabelWidth = _useState4[1];
+function debounce(fn, ms) {
+  var _arguments = arguments,
+      _this = this;
+
+  var timer;
+  return function (_) {
+    clearTimeout(timer);
+    timer = setTimeout(function (_) {
+      timer = null;
+      fn.apply(_this, _arguments);
+    }, ms);
+  };
+}
+
+function Input(props) {
+  var _React$useState = React__default.useState({
+    inputWidth: 0,
+    labelWidth: 0
+  }),
+      _React$useState2 = _rollupPluginBabelHelpers._slicedToArray(_React$useState, 2),
+      dimensions = _React$useState2[0],
+      setDimensions = _React$useState2[1];
 
   var inputRef = React.useRef(null);
   var labelRef = React.useRef(null);
   React.useEffect(function () {
-    setInputWidth(inputRef.current.clientWidth);
-    setLabelWidth(labelRef.current.clientWidth);
+    setDimensions({
+      inputWidth: inputRef.current.clientWidth,
+      labelWidth: labelRef.current.clientWidth
+    });
+    var debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        inputWidth: inputRef.current.clientWidth,
+        labelWidth: labelRef.current.clientWidth
+      });
+    }, 1000);
+    window.addEventListener("resize", debouncedHandleResize);
+    return function (_) {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
   });
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
@@ -117,17 +140,16 @@ function Input(props) {
     onClick: props.onClick,
     placeholder: " "
   }, props, {
-    inputOffset: inputWidth,
-    labelOffset: labelWidth,
+    inputOffset: dimensions.inputWidth,
+    labelOffset: dimensions.labelWidth,
     ref: inputRef,
     autoComplete: "off"
   })), /*#__PURE__*/React__default.createElement(Label, {
-    ref: labelRef,
-    inputOffset: inputWidth,
-    labelOffset: labelWidth,
     "for": props.id,
     disabled: props.disabled
-  }, props.label));
+  }, /*#__PURE__*/React__default.createElement("p", {
+    ref: labelRef
+  }, props.label)));
 }
 Input.PropTypes = {
   placeholder: index.PropTypes.string
