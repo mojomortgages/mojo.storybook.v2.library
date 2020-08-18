@@ -98,7 +98,7 @@ function Input(props) {
     setDimensions({
       labelWidth: labelRef.current.clientWidth
     });
-  });
+  }, []);
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement(Loader, {
