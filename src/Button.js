@@ -12,7 +12,7 @@ var React__default = _interopDefault(React);
 var LightenDarkenColor = require('./LightenDarkenColor-93e75230.js');
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  padding: 16px 24px;\n  border-radius: ", ";\n  border: none;\n  font-size: 1rem;\n  color: white;\n  color: ", ";\n  transition: background 0.2s;\n  cursor: pointer;\n  &:hover {\n    background: ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  padding: 16px 24px;\n  border-radius: ", ";\n  border: none;\n  font-size: 1rem;\n  color: ", ";\n  transition: background 0.2s;\n  cursor: pointer;\n  &:hover {\n    background: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -25,7 +25,7 @@ var Container = styled__default.button(_templateObject(), function (props) {
 }, function (props) {
   return props.theme.radius["default"];
 }, function (props) {
-  return props.theme.text ? props.theme.text : "white";
+  return props.color ? props.color : props.theme.text ? props.theme.text : "white";
 }, function (props) {
   return props.disabled ? props.theme.cta + "80" : props.color ? LightenDarkenColor.LightenDarkenColor(props.color, 25) : LightenDarkenColor.LightenDarkenColor(props.theme.cta, 25);
 });
