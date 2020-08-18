@@ -85,47 +85,19 @@ var Loader = styled__default.div(_templateObject5(), function (props) {
 }, animation, function (props) {
   return props.isLoading ? "block" : "none";
 });
-
-function debounce(fn, ms) {
-  var _arguments = arguments,
-      _this = this;
-
-  var timer;
-  return function (_) {
-    clearTimeout(timer);
-    timer = setTimeout(function (_) {
-      timer = null;
-      fn.apply(_this, _arguments);
-    }, ms);
-  };
-}
-
 function Input(props) {
   var _React$useState = React__default.useState({
-    inputWidth: 0,
     labelWidth: 0
   }),
       _React$useState2 = _rollupPluginBabelHelpers._slicedToArray(_React$useState, 2),
       dimensions = _React$useState2[0],
       setDimensions = _React$useState2[1];
 
-  var inputRef = React.useRef(null);
   var labelRef = React.useRef(null);
   React.useEffect(function () {
     setDimensions({
-      inputWidth: inputRef.current.clientWidth,
       labelWidth: labelRef.current.clientWidth
     });
-    var debouncedHandleResize = debounce(function handleResize() {
-      setDimensions({
-        inputWidth: inputRef.current.clientWidth,
-        labelWidth: labelRef.current.clientWidth
-      });
-    }, 1000);
-    window.addEventListener("resize", debouncedHandleResize);
-    return function (_) {
-      window.removeEventListener("resize", debouncedHandleResize);
-    };
   });
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
@@ -140,9 +112,7 @@ function Input(props) {
     onClick: props.onClick,
     placeholder: " "
   }, props, {
-    inputOffset: dimensions.inputWidth,
     labelOffset: dimensions.labelWidth,
-    ref: inputRef,
     autoComplete: "off"
   })), /*#__PURE__*/React__default.createElement(Label, {
     "for": props.id,
