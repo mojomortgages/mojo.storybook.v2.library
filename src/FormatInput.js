@@ -1361,8 +1361,18 @@ function (_React$Component) {
 NumberFormat.propTypes = propTypes$1;
 NumberFormat.defaultProps = defaultProps;
 
+function _templateObject3() {
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  box-sizing: border-box;\n  outline: none;\n  color: ", ";\n  transition: 0.4s;\n  &:empty {\n    + ", " {\n      width: 0;\n    }\n  }\n  &:focus,\n  &:not(:placeholder-shown) {\n    color: ", ";\n    + ", " {\n      width: 100%;\n      p {\n        transform: scale(0.8);\n      }\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  color: ", ";\n  box-sizing: border-box;\n  outline: none;\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  position: absolute;\n  width: 100%;\n  display: block;\n  transition: 0.4s;\n  padding-left: 16px;\n  padding-right: 16px;\n  top: 0;\n  bottom: 0;\n  margin: auto;\n  line-height: 44px;\n  pointer-events: none;\n  user-select: none;\n  color: ", ";\n  z-index: 1;\n  white-space: nowrap;\n  text-align: right;\n  p {\n    display: inline-block;\n    transition: 0.4s;\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -1391,10 +1401,28 @@ var Container = styled__default.div(_templateObject(), function (props) {
 }, function (props) {
   return props.theme.cta;
 });
-var InnerInput = styled__default(NumberFormat)(_templateObject2(), function (props) {
-  return props.theme.shade[0];
+var Label = styled__default.label(_templateObject2(), function (props) {
+  return props.theme.shade[20];
 });
+var InnerInput = styled__default(NumberFormat)(_templateObject3(), function (props) {
+  return props.label == undefined ? props.theme.shade[20] : props.theme.shade[100];
+}, Label, function (props) {
+  return props.theme.shade[20];
+}, Label);
 function FormatInput(props) {
+  var _React$useState = React__default.useState({
+    labelWidth: 0
+  }),
+      _React$useState2 = _rollupPluginBabelHelpers._slicedToArray(_React$useState, 2),
+      dimensions = _React$useState2[0],
+      setDimensions = _React$useState2[1];
+
+  var labelRef = React.useRef(null);
+  React.useEffect(function () {
+    setDimensions({
+      labelWidth: labelRef.current.clientWidth
+    });
+  }, []);
   return /*#__PURE__*/React__default.createElement(Container, {
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement(InnerInput, _rollupPluginBabelHelpers._extends({
@@ -1405,7 +1433,12 @@ function FormatInput(props) {
     value: props.value,
     onChange: props.onChange,
     onClick: props.onClick
-  }, props)));
+  }, props)), /*#__PURE__*/React__default.createElement(Label, {
+    "for": props.id,
+    disabled: props.disabled
+  }, /*#__PURE__*/React__default.createElement("p", {
+    ref: labelRef
+  }, props.label)));
 }
 FormatInput.PropTypes = {
   placeholder: index.PropTypes.string
