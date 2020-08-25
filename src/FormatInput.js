@@ -1362,7 +1362,7 @@ NumberFormat.propTypes = propTypes$1;
 NumberFormat.defaultProps = defaultProps;
 
 function _templateObject3() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  box-sizing: border-box;\n  outline: none;\n  color: ", ";\n  transition: 0.4s;\n  &:empty {\n    + ", " {\n      width: 0;\n    }\n  }\n  &:focus,\n  &:not(:placeholder-shown) {\n    color: ", ";\n    + ", " {\n      width: 100%;\n      p {\n        transform: scale(0.8);\n      }\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  display: block;\n  border: none;\n  background: transparent;\n  width: 100%;\n  height: 100%;\n  padding: 12px 16px;\n  font-size: 16px;\n  box-sizing: border-box;\n  outline: none;\n  color: ", ";\n  transition: 0.4s;\n  &:empty {\n    + ", " {\n      width: 0;\n    }\n  }\n  &:focus,\n  &:not(:placeholder-shown) {\n    color: ", ";\n    + ", " {\n      width: 100%;\n      p {\n        transform-origin: right;\n        transform: scale(0.8);\n      }\n      /* The 0.5 is to fix a bug with overflow */\n    }\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -1434,7 +1434,8 @@ function FormatInput(props) {
     formattedValue: props.formattedValue,
     floatValue: props.floatValue,
     onChange: props.onChange,
-    onClick: props.onClick
+    onClick: props.onClick,
+    labelOffset: dimensions.labelWidth
   }, props)), /*#__PURE__*/React__default.createElement(Label, {
     "for": props.id,
     disabled: props.disabled
