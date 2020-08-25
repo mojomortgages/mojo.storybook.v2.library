@@ -1405,9 +1405,9 @@ var Label = styled__default.label(_templateObject2(), function (props) {
   return props.theme.shade[20];
 });
 var InnerInput = styled__default(NumberFormat)(_templateObject3(), function (props) {
-  return props.label == undefined ? props.theme.shade[20] : props.theme.shade[100];
+  return props.label == undefined ? props.theme.shade[0] : props.theme.shade[100];
 }, Label, function (props) {
-  return props.theme.shade[20];
+  return props.theme.shade[0];
 }, Label);
 function FormatInput(props) {
   var _React$useState = React__default.useState({
