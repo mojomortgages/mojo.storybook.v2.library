@@ -1431,6 +1431,8 @@ function FormatInput(props) {
     disabled: props.disabled,
     placeholder: props.placeholder,
     value: props.value,
+    formattedValue: props.formattedValue,
+    floatValue: props.floatValue,
     onChange: props.onChange,
     onClick: props.onClick
   }, props)), /*#__PURE__*/React__default.createElement(Label, {
