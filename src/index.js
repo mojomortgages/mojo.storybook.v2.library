@@ -12,12 +12,10 @@ export { default as Input } from './Input.js';
 export { default as LibraryThemeProvider } from './LibraryThemeProvider.js';
 export { default as OnboardingNav } from './OnboardingNav.js';
 export { default as OutlineButton } from './OutlineButton.js';
-export { default as PrefixInput } from './PrefixInput.js';
 export { default as ProgressBar } from './ProgressBar.js';
 export { default as ProgressIndicator } from './ProgressIndicator.js';
 export { default as RadioButton } from './RadioButton.js';
 export { default as Select } from './Select.js';
-export { default as SuffixInput } from './SuffixInput.js';
 export { default as Tooltip } from './Tooltip.js';
 export { default as Validation } from './Validation.js';
 
