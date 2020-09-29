@@ -42,7 +42,8 @@ function BackButton(props) {
     disabled: props.disabled,
     value: props.value,
     onChange: props.onChange,
-    onClick: props.onClick
+    onClick: props.onClick,
+    id: props.id
   }, /*#__PURE__*/React__default.createElement(ArrowImg, {
     disabled: props.disabled
   }), props.children);
