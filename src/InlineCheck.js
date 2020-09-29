@@ -23,7 +23,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  transition: 0.2s;\n  flex-shrink: 0;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    transform: scale(0) rotate(45deg);\n    transform-origin: center;\n    transition: 0.2s;\n    background-image: url(\"", "\");\n    background-position: center;\n    background-repeat: no-repeat;\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  width: 24px;\n  height: 24px;\n  background: ", ";\n  box-shadow: 0 0 0 1px ", ";;\n  margin-right: 16px;\n  border-radius: 4px;\n  position: relative;\n  transition: 0.2s;\n  flex-shrink: 0;\n  &:after {\n    content: \"\";\n    position: absolute;\n    right: 0;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto;\n    width: 12px;\n    height: 12px;\n    transform: scale(0) rotate(45deg);\n    transform-origin: center;\n    transition: 0.2s;\n    background-image: url(\"", "\");\n    background-position: center;\n    background-repeat: no-repeat;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -68,6 +68,8 @@ var Container = styled__default.label(_templateObject3(), function (props) {
 });
 var Checkmark = styled__default.span(_templateObject4(), function (props) {
   return props.theme.shade[80];
+}, function (props) {
+  return props.theme.shade[60];
 }, check.Check);
 var Input = styled__default.input(_templateObject5(), Container, Checkmark, function (props) {
   return props.theme.tertiary;
