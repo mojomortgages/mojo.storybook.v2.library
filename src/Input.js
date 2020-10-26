@@ -42,7 +42,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: 1px solid ", ";\n  background: ", ";\n  position: relative;\n  border-radius: ", ";\n  &:focus-within {\n    border: 1px solid ", ";\n    box-shadow: 0 0 4px ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  border: 1px solid ", ";\n  background: ", ";\n  position: relative;\n  border-radius: ", ";\n  &:focus-within {\n    border: 2px solid ", ";\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -69,8 +69,6 @@ var Container = styled__default.div(_templateObject2(), function (props) {
   return props.disabled ? props.theme.shade[80] : props.theme.shade[100];
 }, function (props) {
   return props.theme.radius["default"];
-}, function (props) {
-  return props.theme.cta;
 }, function (props) {
   return props.theme.cta;
 });
