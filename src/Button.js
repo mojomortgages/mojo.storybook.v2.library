@@ -12,7 +12,7 @@ var React__default = _interopDefault(React);
 var LightenDarkenColor = require('./LightenDarkenColor-93e75230.js');
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  padding: 16px 24px;\n  border-radius: ", ";\n  border: none;\n  font-size: 1rem;\n  color: ", ";\n  transition: background 0.2s;\n  cursor: pointer;\n  &:hover {\n    background: ", ";\n  }\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  background: ", ";\n  padding: 16px 32px;\n  border-radius: ", ";\n  border: none;\n  font-size: 1rem;\n  color: ", ";\n  transition: background 0.2s;\n  cursor: pointer;\n  &:hover {\n    background: ", ";\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
