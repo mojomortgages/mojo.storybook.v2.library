@@ -21,7 +21,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 24px;\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n"]);
+  var data = _rollupPluginBabelHelpers._taggedTemplateLiteral(["\n  padding: 24px 32px 24px 32px;\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
