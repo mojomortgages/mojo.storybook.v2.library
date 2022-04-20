@@ -112,13 +112,13 @@ function Input(props) {
     autoComplete: "off",
     labelOffset: dimensions.labelWidth
   }, props)), /*#__PURE__*/React__default.createElement(Label, {
-    "for": props.id,
+    htmlFor: props.id,
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement("p", {
     ref: labelRef
   }, props.label)));
 }
-Input.PropTypes = {
+Input.propTypes = {
   placeholder: index.PropTypes.string
 };
 
