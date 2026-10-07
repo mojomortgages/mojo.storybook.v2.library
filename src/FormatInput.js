@@ -116,6 +116,14 @@ function createCommonjsModule(fn, module) {
  * LICENSE file in the root directory of this source tree.
  */
 
+// NOTE (AIA-17341 / AIA-15845 / AIA-6755): not a credential. This is the
+// `prop-types@15.8.1` library's own internal sentinel value, named
+// "ReactPropTypesSecret" by upstream but used only to stop app code from
+// calling PropTypes validators directly -- it has been unchanged since 2013
+// in the open-source `prop-types` package and is bundled here verbatim via
+// `react-number-format -> prop-types`. There is no real secret, key, or
+// password here; nothing to rotate. Re-verified against a fresh `npm pack`
+// of prop-types@15.8.1 that the string matches upstream byte-for-byte.
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 var ReactPropTypesSecret_1 = ReactPropTypesSecret;
